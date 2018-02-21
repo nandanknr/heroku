@@ -1,0 +1,36 @@
+<html>
+<body><h1>
+	<ul>
+		 	<% if (errors != undefined){ %>
+
+
+
+			<% errors.forEach(function(error){ %>
+
+			<li><%= error.msg %></li>
+
+			<% }) %>
+
+			<% } %>
+
+		</ul></h1>
+<form method="POST" action="/users/add">
+
+<div><input type="text" name="fname"><br>
+	<input type="text" name="lname" ><br>
+</div>
+<br>
+
+	<div>
+	<input type="submit" value="Submit">
+	</div>
+		<ul>
+			<% users.forEach(function(user){ %>
+			<li><%= user.fname %> <%= user.lname %></li>
+
+			<% }) %>
+
+		</ul>
+</form>
+</body>
+</html>
